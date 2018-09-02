@@ -1,0 +1,28 @@
+.main-header {
+    margin: 0 auto;
+    margin-top: 5%;
+    background: #6e6e6e;
+    color: #fff;
+    width: 100%;
+    min-width: 90%;
+    text-align: center;
+	padding: 5vh;
+}
+
+.main-header > .main-header-title {
+    margin-top: 4vh;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #ddd;
+}
+
+.main-header > .main-header-subtitle {
+    font-size: 2em;
+}
+
+.main-header > hr {
+    width: 5px;
+    background-color: #a8a8a8;
+    border: 0.1em solid #a8a8a8;
+    padding: 0 1em;
+}
