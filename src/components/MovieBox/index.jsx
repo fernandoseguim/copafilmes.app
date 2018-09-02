@@ -4,10 +4,10 @@ import './style.css';
 export default (props) => (
     <Fragment>
         <div className="movie-box">
-            <input id={ props.id } name={ props.id } type="checkbox"/>
-            <label htmlFor={ props.id }>
-                <span className="movie-title">Título do filme</span>
-                <span className="movie-year">2018</span>
+            <input id={ props.movie.id } name={ props.movie.id } type="checkbox"/>
+            <label htmlFor={ props.movie.id }>
+                <span className="movie-title">{ props.movie.title }</span>
+                <span className="movie-year">{ props.movie.year }</span>
             </label>   
         </div>
     </Fragment>
