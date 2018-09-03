@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
-import Header from '../components/Header';
-import MovieForm from '../components/MovieForm';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Movies from '../pages/Movies';
+import Winners from '../pages/Winners';
 
 class Main extends Component {
     render(){
         return (
-            <div className="container">
-                <Header 
-                    subtitle="Fase de Seleção" 
-                    message="Selecione 8 filmes que você deseja que entrem na competição e depois pressione o botão Gerar Meu Campeonato para prosseguir." 
-                />
-                <MovieForm />
-            </div>
+            <BrowserRouter>
+                <Switch>
+                    <Route path="/" exact component ={Movies} />
+                    <Route path="/winners" component ={Winners} />
+                </Switch>
+            </BrowserRouter>
         )
     }
 }
