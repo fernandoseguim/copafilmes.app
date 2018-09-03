@@ -1,36 +1,51 @@
 import React, { Fragment } from 'react';
+import Counter from '../Counter';
+import Button from '../Button';
 import MovieBox from '../MovieBox';
 import './style.css';
 
+const movie = {
+    id: 1,
+    title: "Infinity war",
+    year: "2018"
+}
+
 export default (props) => (
     <Fragment>
-        <form>
-            <div className="movie-list">
-                <div className="movie-group">
-                    <MovieBox id="1" />
-                    <MovieBox id="2" />
-                    <MovieBox id="3" />
-                    <MovieBox id="4" />
+        <section className="content">        
+            <Counter count={0} limit={8} />
+            <Button />
+            
+            <form>
+                {/* TODO: Should input movies through copafilmes service */}
+                <div className="movie-list">
+                    <div className="movie-group">
+                        <MovieBox movie={movie} />
+                        <MovieBox movie={movie} />
+                        <MovieBox movie={movie} />
+                        <MovieBox movie={movie} />
+                    </div>
+                    <div className="movie-group">
+                        <MovieBox movie={movie} />
+                        <MovieBox movie={movie} />
+                        <MovieBox movie={movie} />
+                        <MovieBox movie={movie} />
+                    </div>
+                    <div className="movie-group">
+                        <MovieBox movie={movie} />
+                        <MovieBox movie={movie} />
+                        <MovieBox movie={movie} />
+                        <MovieBox movie={movie} />
+                    </div>
+                    <div className="movie-group">
+                        <MovieBox movie={movie} />
+                        <MovieBox movie={movie} />
+                        <MovieBox movie={movie} />
+                        <MovieBox movie={movie} />
+                    </div>
                 </div>
-                <div className="movie-group">
-                    <MovieBox id="5" />
-                    <MovieBox id="6" />
-                    <MovieBox id="7" />
-                    <MovieBox id="8" />
-                </div>
-                <div className="movie-group">
-                    <MovieBox id="9" />
-                    <MovieBox id="10" />
-                    <MovieBox id="11" />
-                    <MovieBox id="12" />
-                </div>
-                <div className="movie-group">
-                    <MovieBox id="13" />
-                    <MovieBox id="14" />
-                    <MovieBox id="15" />
-                    <MovieBox id="16" />
-                </div>
-            </div>
-        </form>
+            </form>
+            <Button className="footer" />
+        </section>
     </Fragment>
 );
