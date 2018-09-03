@@ -1,0 +1,11 @@
+.counter {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    width: 250px;
+    float: left;
+}
+
+.counter > span {
+    display: block;
+}
